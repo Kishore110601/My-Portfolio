@@ -17,26 +17,10 @@ export default function Skills() {
       console.error('Error fetching skills:', error)
       // Fallback to sample data
       setSkills([
-        {
-          _id: '1',
-          category: 'ServiceNow Platform',
-          skills: ['ITSM', 'CSM', 'Service Portal', 'App Engine Studio', 'Flow Designer', 'Integration Hub'],
-        },
-        {
-          _id: '2',
-          category: 'Automation & Intelligence',
-          skills: ['Virtual Agent', 'Predictive Intelligence', 'Workflow Automation', 'Business Rules', 'UI Actions'],
-        },
-        {
-          _id: '3',
-          category: 'Integration & Data',
-          skills: ['REST API', 'SOAP', 'Inbound/Outbound Integrations', 'Data Transformations', 'Platform Analytics'],
-        },
-        {
-          _id: '4',
-          category: 'Development',
-          skills: ['JavaScript', 'Glide Scripting', 'HTML/CSS', 'UI Builder', 'Service Portal'],
-        },
+        { _id: '1', category: 'ServiceNow', skills: ['Admin', 'Developer', 'Configuration', 'Scripting'] },
+        { _id: '2', category: 'Programming', skills: ['JavaScript', 'Python', 'Java', 'SQL'] },
+        { _id: '3', category: 'Web Technologies', skills: ['REST API', 'HTML/CSS', 'React', 'Node.js'] },
+        { _id: '4', category: 'Databases', skills: ['MongoDB', 'MySQL', 'PostgreSQL', 'Oracle'] },
       ])
     } finally {
       setLoading(false)
@@ -72,6 +56,18 @@ export default function Skills() {
         ))}
       </div>
 
+      {/* Awards moved to a dedicated page */}
+
+      <div className="mt-16 bg-blue-500 text-white p-12 rounded-lg">
+        <h2 className="text-3xl font-bold mb-4">Ready to Collaborate?</h2>
+        <p className="text-lg mb-6">Let's leverage these skills to build something amazing together</p>
+        <a
+          href="mailto:kishorekishor39@gmail.com?subject=connection%20request"
+          className="inline-block bg-white text-blue-500 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
+        >
+          Get in Touch
+        </a>
+      </div>
     </div>
   )
 }

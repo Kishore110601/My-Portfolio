@@ -30,12 +30,10 @@ export default function Home() {
           Hi, I'm a <span className="text-blue-500">ServiceNow Developer</span>
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-          ServiceNow developer at KeenStack focused on delivering ITSM and workflow automation solutions for enterprise teams.
+          Passionate about building scalable ServiceNow solutions and helping organizations optimize their workflows
         </p>
         <a
-          href="https://www.linkedin.com/in/kishore-r11/"
-          target="_blank"
-          rel="noreferrer"
+          href="mailto:kishorekishor39@gmail.com?subject=connection%20request"
           className="inline-flex items-center space-x-2 bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg transition-colors"
         >
           <span>Get in Touch</span>
@@ -50,11 +48,11 @@ export default function Home() {
           <p className="text-gray-600 dark:text-gray-400">Years of Experience</p>
         </div>
         <div className="bg-gray-100 dark:bg-gray-800 p-8 rounded-lg text-center">
-          <h3 className="text-4xl font-bold text-blue-500 mb-2">23</h3>
+          <h3 className="text-4xl font-bold text-blue-500 mb-2">15+</h3>
           <p className="text-gray-600 dark:text-gray-400">Certifications</p>
         </div>
         <div className="bg-gray-100 dark:bg-gray-800 p-8 rounded-lg text-center">
-          <h3 className="text-4xl font-bold text-blue-500 mb-2">2</h3>
+          <h3 className="text-4xl font-bold text-blue-500 mb-2">20+</h3>
           <p className="text-gray-600 dark:text-gray-400">Projects Completed</p>
         </div>
       </motion.div>
@@ -63,35 +61,28 @@ export default function Home() {
       <motion.div className="mb-20" variants={item}>
         <h2 className="text-4xl font-bold mb-12">Featured Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-gray-100 dark:bg-gray-800 p-8 rounded-lg hover:shadow-lg transition-shadow">
-            <h3 className="text-2xl font-bold mb-4">Referral Management App</h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-4">
-              Built a ServiceNow referral management application using AI-driven matching, automated approvals, and workflow orchestration over 6 months.
-            </p>
-            <Link
-              to="/projects"
-              className="text-blue-500 hover:text-blue-600 flex items-center space-x-2"
+          {[1, 2].map((i) => (
+            <div
+              key={i}
+              className="bg-gray-100 dark:bg-gray-800 p-8 rounded-lg hover:shadow-lg transition-shadow"
             >
-              <span>View Details</span>
-              <FiArrowRight />
-            </Link>
-          </div>
-          <div className="bg-gray-100 dark:bg-gray-800 p-8 rounded-lg hover:shadow-lg transition-shadow">
-            <h3 className="text-2xl font-bold mb-4">Kirkland ITSM Project</h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-4">
-              Delivered the Kirkland ITSM implementation using ServiceNow ITSM modules, process automation, and incident management over 9 months.
-            </p>
-            <Link
-              to="/projects"
-              className="text-blue-500 hover:text-blue-600 flex items-center space-x-2"
-            >
-              <span>View Details</span>
-              <FiArrowRight />
-            </Link>
-          </div>
+              <h3 className="text-2xl font-bold mb-4">Project {i}</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
+                Sample ServiceNow implementation project
+              </p>
+              <Link
+                to="/projects"
+                className="text-blue-500 hover:text-blue-600 flex items-center space-x-2"
+              >
+                <span>View Details</span>
+                <FiArrowRight />
+              </Link>
+            </div>
+          ))}
         </div>
       </motion.div>
 
+      {/* 'Work Together' call-to-action removed per request */}
     </motion.div>
   )
 }
