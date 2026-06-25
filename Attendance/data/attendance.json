@@ -1,0 +1,30 @@
+{
+  "students": [
+    {
+      "id": "s1",
+      "name": "Alice Johnson"
+    },
+    {
+      "id": "s2",
+      "name": "Bob Smith"
+    },
+    {
+      "id": "s3",
+      "name": "Charlie Lee"
+    },
+    {
+      "id": "123",
+      "name": "kishore"
+    }
+  ],
+  "attendance": [
+    {
+      "date": "2026-06-24",
+      "statusById": {
+        "s1": "present",
+        "s2": "absent",
+        "s3": "present"
+      }
+    }
+  ]
+}

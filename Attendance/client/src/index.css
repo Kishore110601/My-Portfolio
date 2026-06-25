@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f4f6fb;
+  color: #111827;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.app {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.app-header {
+  padding: 18px 24px;
+  margin-bottom: 18px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #2563eb 0%, #60a5fa 100%);
+  color: white;
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.2);
+}
+
+.app-header h1 {
+  margin: 0 0 8px;
+  font-size: 1.9rem;
+}
+
+.app-header p {
+  margin: 0;
+  opacity: 0.92;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.hero-card {
+  text-align: center;
+}
+
+h1,
+h2 {
+  margin: 0 0 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  background: #2563eb;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button.secondary-button,
+button.secondary-button:hover {
+  background: #6b7280;
+}
+
+.button-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.button-grid button {
+  width: 100%;
+}
+
+.student-grid,
+.form-grid {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.student-row,
+.roster-row {
+  display: grid;
+  grid-template-columns: 1fr 140px;
+  gap: 12px;
+  align-items: center;
+}
+
+.roster-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.roster-actions {
+  display: inline-flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.secondary-button {
+  background: #6b7280;
+}
+
+.secondary-button:hover {
+  background: #4b5563;
+}
+
+.roster-name-edit input {
+  width: 100%;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 300px;
+}
+
+.attendance-table th,
+.attendance-table td {
+  border: 1px solid #e5e7eb;
+  padding: 14px;
+  text-align: left;
+}
+
+.report-table-wrap {
+  overflow-x: auto;
+  margin-top: 16px;
+}
+
+.report-table th,
+.report-table td {
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.attendance-table th {
+  background: #eff6ff;
+}
+
+.small-button {
+  width: auto;
+  padding: 12px 20px;
+}
+
+@media (max-width: 640px) {
+  .student-row,
+  .roster-row {
+    grid-template-columns: 1fr;
+  }
+  .roster-actions {
+    justify-content: flex-start;
+  }
+}
+
+/* Login styles */
+.login-page.centered-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+.login-page.centered-page .login-form-wrap {
+  width: 100%;
+  max-width: 420px;
+}
+.login-card {
+  width: 100%;
+  max-width: 420px;
+}
+
+.login-form-wrap {
+  width: 100%;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+.login-form-wrap.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.login-card .card,
+.login-page .card {
+  max-width: 100%;
+}
+.login-page .error {
+  color: #b91c1c;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 880px) {
+  .login-page {
+    padding: 32px 18px;
+  }
+  .login-form-wrap {
+    max-width: 420px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .login-page {
+    padding: 20px 12px;
+    min-height: 520px;
+  }
+  .login-form-wrap { width: 100%; }
+  .login-page .card { width: 100%; }
+}
